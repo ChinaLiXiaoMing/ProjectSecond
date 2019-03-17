@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://java.sun.com/xml/ns/javaee" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>Servlet见解</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -9,14 +11,21 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
+  <!-- web应用全局参数 -->
+ <!--  <context-param>
+  <param-name></param-name>
+  <param-value></param-value>
+  </context-param> -->
   <servlet>
   <servlet-name>abc</servlet-name>
-  <servlet-class>com.LIXIAOMING.DemoServlet</servlet-class>
+  <servlet-class>com.LIXIAOMING.DemoServlet</servlet-class>  
+  <load-on-startup>3</load-on-startup><!-- start time 提前调用init（）方法，不用等到request网站 -->
+  <!--number 越大权限越大  -->
   </servlet>
   
  <servlet-mapping>
  <servlet-name>abc</servlet-name>
- <url-pattern>/abc</url-pattern>
+ <url-pattern>*.html</url-pattern><!--只填 /代表缺省 ，但如果给定扩展名时  Browser 访问URL地址必须遵从servlet配置，否则404-->
+ <!--完全匹配，，，，，目录匹配/*/*/*  *.html扩展名匹配，不管名字怎样必须。HTML才能访问-->
  </servlet-mapping>
 </web-app>
