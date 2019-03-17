@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Servlet实现登录窗口功能">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="Servlet实现登录窗口功能"/>
+        <property name="java-output-path" value="/Servlet实现登录窗口功能/build/classes"/>
+    </wb-module>
+</project-modules>
