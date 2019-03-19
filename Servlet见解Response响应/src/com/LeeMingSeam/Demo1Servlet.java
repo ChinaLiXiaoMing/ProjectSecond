@@ -34,7 +34,7 @@ public class Demo1Servlet extends HttpServlet {
 		 * 
 		 * 404----not found
 		 * 
-		 * 500----server err
+		 * 500----servers error
 		 * 
 		 * 304------÷ÿ∂®œÚ
 		*/
